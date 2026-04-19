@@ -1,0 +1,3 @@
+flask
+gpiozero
+# RPi.GPIO (optional, but gpiozero usually handles backend selection)

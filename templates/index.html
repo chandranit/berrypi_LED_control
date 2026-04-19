@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pi Glow | LED Control Center</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <main class="container">
+        <header>
+            <h1 id="main-title">Pi Glow</h1>
+            <p class="subtitle">Raspberry Pi 3B+ Controller</p>
+        </header>
+
+        <section class="control-card">
+            <div class="status-indicator">
+                <div id="led-visual" class="led-glow off"></div>
+                <span id="status-text">OFF</span>
+            </div>
+
+            <div class="controls">
+                <button id="toggle-btn" class="btn primary">
+                    <span class="btn-text">TOGGLE LED</span>
+                    <div class="btn-shine"></div>
+                </button>
+            </div>
+
+            <div class="details">
+                <div class="detail-item">
+                    <span class="label">GPIO Pin</span>
+                    <span id="pin-number" class="value">--</span>
+                </div>
+                <div class="detail-item">
+                    <span class="label">Environment</span>
+                    <span id="env-type" class="value">--</span>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2024 Pi Glow Dashboard</p>
+        </footer>
+    </main>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
